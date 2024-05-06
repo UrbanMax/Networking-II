@@ -1,0 +1,67 @@
+Mission 1: Mail servers for starwars.com
+Mail servers:
+
+aspmx.l.google.com
+alt2.aspmx.l.google.com
+aspmx3.googlemail.com
+aspmx2.googlemail.com
+alt2.aspmx.l.google.com
+Explanation:
+The Resistance isn't receiving any emails possibly due to configuration issues with their mail server or connectivity problems preventing the emails from reaching their destination.
+
+Suggested DNS corrections:
+Ensure that the Resistance's mail server is properly configured to accept emails from the designated Google mail servers. Verify network connectivity and firewall settings to allow incoming emails.
+
+Mission 2: Sender Policy Framework (SPF) of theforce.net
+SPF Record:
+
+theforce.net    text = "v=spf1 a mx a:mail.wise-advice.com mx:smtp.secureserver.net include:aspmx.googlemail.com ip4:45.63.15.159 ip4:45.63.4.215  ~all"
+Explanation:
+The Force's emails might be going to spam due to an incomplete or outdated SPF record that doesn't authorize all legitimate sources of email sending.
+
+Suggested DNS corrections:
+Update the SPF record to include all relevant sources (A, MX records, IP addresses) and regularly review and update DNS settings to ensure emails are properly authorized.
+
+Mission 3: Document the CNAME records
+CNAME Record:
+
+www.theforce.net        canonical name = theforce.net
+
+Explanation:
+The subpage resistance.theforce.net isn’t redirecting to theforce.net because there's no DNS record (CNAME or A record) for resistance.theforce.net.
+
+Suggested DNS corrections:
+Add a DNS entry (CNAME or A record) for resistance.theforce.net pointing to theforce.net to enable redirection to the main domain.
+
+Mission 4: Confirm the DNS records for princessleia.site
+DNS Records:
+
+princessleia.site       nameserver = ns26.domaincontrol.com.
+princessleia.site       nameserver = ns25.domaincontrol.com.
+
+Explanation:
+The DNS records for princessleia.site are hosted on ns25.domaincontrol.com and ns26.domaincontrol.com.
+
+Suggested DNS record corrections:
+Regularly update and monitor DNS records, ensure accurate IP addresses, implement DNSSEC for security, and verify DNS provider settings to prevent future issues.
+
+Mission 5: Document the shortest OSPF path from Batuu to Jedha
+OSPF Path:
+BATUU → C → E → F → J → I → L → Q → T → V → JEDHA
+
+OSPF Path Cost:
+1 + 2 + 1 + 1 + 1 + 1 + 6 + 4 + 2 + 2 + 2 = 23
+
+Mission 6: Wireless key and Host IP/MAC addresses
+Wireless Key:
+KEY FOUND! [dictionary]
+
+Host IP and MAC addresses:
+
+Sender MAC address: 00:0f:66:e3:e4:01
+Sender IP address: 172.16.0.1
+Target MAC address: 00:13:ce:55:98:ef
+Target IP address: 172.16.0.101
+Mission 7: Screenshot of results
+Please insert the screenshot of the results for Mission 7. This could include network configurations, commands outputs, or any relevant information needed to complete the mission.
+
